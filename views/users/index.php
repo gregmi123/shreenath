@@ -1,0 +1,61 @@
+<?php
+
+use yii\helpers\Html;
+use yii\grid\GridView;
+
+/* @var $this yii\web\View */
+/* @var $searchModel app\models\UsersSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = 'Users';
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="users-index">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+
+    <p>
+        <?= Html::a('Create Users', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
+
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+    <?=
+    GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+//            'id',
+            'username',
+            //'password',
+            //'auth_key',
+            [
+                'attribute' => 'fk_organization_id',
+                'value' => 'organization.name_nepali',
+            ],
+            [
+                'attribute'=>'fk_branch_id',
+                'value'=>'branch.tol',
+            ],
+            //'status',
+            ['attribute'=>'type',
+            'value'=>function($data){
+                if($data['type']==2){
+                    return 'Admin';
+                }else if($data['type']==3){
+                    return 'Employee';
+                }else{
+                    return 'Superadmin';
+                }
+            }
+            ],
+            'created_date',
+            // 'type',
+            ['class' => 'yii\grid\ActionColumn', 'template' => '{update}'],
+        ],
+    ]);
+    ?>
+
+
+</div>

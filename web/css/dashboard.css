@@ -1,0 +1,109 @@
+body{
+	margin:0px;
+	padding: 0px;
+	background-color:#1b203d;
+	font-family: system-ui;
+}
+.clearfix{
+	clear: both;
+}
+.col-div-6{
+	width: 50%;
+	float: left;
+}
+
+
+.col-div-3{
+	width: 25%;
+	float: left;
+}
+.box{
+	width: 85%;
+	height: 100px;
+	background-color: #272c4a;
+	
+	padding:10px;
+}
+.box p{
+	 font-size: 35px;
+    color: white;
+    font-weight: bold;
+    line-height: 30px;
+    padding-left: 10px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.box p span{
+	font-size: 1vw;
+	font-weight: 400;
+	color: #818181;
+  
+}
+@media screen and (max-width: 900px) {
+  .box p{
+	 font-size: 35px;
+    color: white;
+    font-weight: bold;
+    line-height: 30px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+  .box p span{
+    font-size: 1vw;
+    color: #818181;
+    margin-bottom:2em;
+    display:flex;
+    
+  }
+}
+
+.box-icon{
+	font-size: 40px!important;
+    float: right;
+    margin-top: 35px!important;
+    color: #818181;
+    padding-right: 10px;
+}
+.col-div-8{
+	width: 80%;
+	float: left;
+}
+.content-box{
+	padding: 20px;
+}
+.content-box p{
+	margin: 0px;
+    font-size: 11px;
+    
+}
+.content-box p span{
+	float: right;
+    background-color: #ddd;
+    padding: 3px 10px;
+    font-size: 11px;
+}
+.box-8, .box-4{
+	width: 95%;
+	background-color: #272c4a;
+	height: 270px;
+	
+}
+.nav2{
+	display: none;
+}
+
+.box-8{
+	margin-left: 10px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  font-size:11px;
+  
+}
+td, th {
+  text-align: left;
+  padding:5px;
+  border-bottom: 1px solid #81818140;
+}
